@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/w/dt/dt-1.10.18/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+
+
+</head>
+<body>
+	<div class="container">
+		<div style="width: 80%; margin:auto" class="content">
+			<div class="header" style="padding:5px 15px; border: 1px solid #DAFAF2;display: flex; position: relative">
+				<div class="mt-2 mb-2">
+					<b>Trang chủ   >>> Quản lý người dùng >>> <span style="color: red">Danh sách</span> </b>
+				</div>
+				<div class="dropdown mt-2 mb-2" style="right: 20px; position: absolute">
+					<div class="dropdown">
+				      <a class="dropdown-toggle" data-toggle="dropdown">Admin
+				    </a>
+				    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+				      <a class="dropdown-item" href="#">Trang cá nhân</a>
+				      <a class="dropdown-item" href="#">Đăng xuất</a>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="search">
+				<div style="padding: 5px  0px; background-color: #F7EFEF; border: 1px solid #DAFAF2;">
+					<h6 class="ml-2"> Tìm kiếm người dùng</h6>
+				</div>
+				<div class="row mt-4 mb-2" style="font-size: 15px">
+					<div class="col-xl-6 col-md-6 col-sm-6 col-xs-6">
+						<form>
+							<div class="form-group row">
+							    <label for="inputEmail3" class="col-sm-3 col-form-label"> <b>Tài Khoản</b></label>
+							    <div class="col-sm-9">
+							      <input type="email" class="form-control" id="inputEmail3" placeholder="Tài khoản">
+							    </div>
+							 </div>
+							 <div class="form-group row">
+							    <label for="inputEmail3" class="col-sm-3 col-form-label"><b>Tên Thật</b></label>
+							    <div class="col-sm-9">
+							      <input type="email" class="form-control" id="inputEmail3" placeholder="Tên thật">
+							    </div>
+							 </div>
+							 <div class="form-group row">
+							    <label for="inputEmail3" class="col-sm-3 col-form-label"><b>Email</b></label>
+							    <div class="col-sm-9">
+							      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+							    </div>
+							 </div>
+							 <div class="form-group row">
+							 		<button class="btn btn-danger" style="font-size: 14px; margin-left: 155px">Reset</button>
+							 		<button class="btn btn-info" style="font-size: 14px; margin-left: 10px">Tìm Kiếm</button>
+							 </div>
+						</form>
+					</div>
+					<div class="col-xl-6 col-md-6 col-sm-6 col-xs-6">
+						<form>
+							<div class="form-group row">
+							    <label for="inputEmail3" class="col-sm-4 col-form-label"><b>Giới Tính</b></label>
+							    <div class="col-sm-8">
+							      <input type="radio" value="0"> Nam
+							      <input type="radio" value="1" > Nữ
+							      <input type="radio" value="2"> Cả hai
+							    </div>
+							 </div>
+							 <div class="form-group row">
+							    <label for="inputEmail3" class="col-sm-4 col-form-label"><b>Ngôn ngữ lập trình</b></label>
+							    <div class="col-sm-8">
+							      <input type="radio" value="0"> PHP
+							      <input type="radio" value="1" > Java
+							      <input type="radio" value="2"> PyThon
+							    </div>
+							 </div>
+							 <div class="form-group row">
+							    <label for="inputEmail3" class="col-sm-4 col-form-label"><b>Quốc tịch</b></label>
+							    <div class="col-sm-8">
+							      <select name="" class="form-control" id="quoctichlist">
+							      	<option value="">--Lựa Chọn Quốc Tịch</option>
+							      	<option value="">Vietnames</option>}
+							      	<option value="">Chinees</option>}
+							      	option
+							      </select>
+							    </div>
+							 </div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div style="padding: 10px  0px; background-color: #F7EFEF; margin-bottom: 40px;border: 1px solid #DAFAF2; ">
+					<h6 class=" mb-1 ml-2">Danh sách người dùng</h6>
+				</div>
+				<table style="margin-top: 25px;font-size: 15px" id="table_id" class="table table-hover table-bordered">
+				    <thead>
+				        <tr>
+				            <th>Tên Tài Khoản</th>
+				            <th>Tên Thật</th>
+				            <th>Email</th>
+				            <th>Giới Tính</th>
+				            <th>Ngôn Ngữ Lập Trình</th>
+				            <th>Quốc Tịch</th>
+				            <th>Action</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				        <tr>
+				            <td>Admin</td>
+				            <td>Le Minh Nghia</td>
+				            <td>leminhnghia123@gmail.com</td>
+				            <td>Nam</td>
+				            <td>PHP,Python</td>
+				            <td>Viet Nam</td>
+				            <td>
+				            	<a href="" title="" class="btn btn-danger">Xóa</a>
+				            </td>
+				        </tr>
+				         <tr>
+				            <td>Admin</td>
+				            <td>Le Minh Nghia</td>
+				            <td>leminhnghia123@gmail.com</td>
+				            <td>Nam</td>
+				            <td>PHP,Python</td>
+				            <td>Viet Nam</td>
+				            <td>
+				            	<a href="" title="" class="btn btn-danger">Xóa</a>
+				            </td>
+				        </tr>
+				         <tr>
+				            <td>Admin</td>
+				            <td>Le Minh Nghia</td>
+				            <td>leminhnghia123@gmail.com</td>
+				            <td>Nam</td>
+				            <td>PHP,Python</td>
+				            <td>Viet Nam</td>
+				            <td>
+				            	<a href="" title="" class="btn btn-danger">Xóa</a>
+				            </td>
+				        </tr>
+				         <tr>
+				            <td>Admin</td>
+				            <td>Le Minh Nghia</td>
+				            <td>leminhnghia123@gmail.com</td>
+				            <td>Nam</td>
+				            <td>PHP,Python</td>
+				            <td>Viet Nam</td>
+				            <td>
+				            	<a href="" title="" class="btn btn-danger">Xóa</a>
+				            </td>
+				        </tr>
+				        </tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- MDBootstrap Datatables  -->
+	<!-- <script type="text/javascript" src="css/js/addons/datatables.min.js"></script> -->
+	<script type="text/javascript" src="https://cdn.datatables.net/w/dt/dt-1.10.18/datatables.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script> -->
+	<script type="text/javascript" src="css/jquery.dataTables.min.js"></script>
+	<script>
+	    $(document).ready(function () {
+	        $('#table_id').DataTable();
+	    });
+	</script>
+</body>
+</html>

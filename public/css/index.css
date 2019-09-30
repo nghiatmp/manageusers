@@ -1,0 +1,80 @@
+.search .form-control{
+	width: 80%;
+	height: 80%;
+}
+#quoctichlist{
+	padding: 0px 5px;
+}
+
+/* /////////////////////////////////// */
+.contentlogin{
+	margin-top:80px;
+	width: 400px;
+	/* margin: auto; */
+	border: 1px solid #55DAFD;
+	margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+} 
+.textlogin{
+	background-color: #178AE3;
+}
+.textlogin h6 {
+	color: white;
+	padding: 15px;
+
+}
+.contentlogin input{
+	width: 70%;
+	margin: auto;
+}
+.contentlogin button{
+	margin-left:145px;
+}
+.footer .footera{
+	 margin-left: 150px; 
+}
+.footer{
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+/* ///////////////////////////////////////////// */
+.contentadd{
+	width:700px;
+	margin-top: 20px;
+	margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+.contentadd label{
+	color: #030303; 	
+}
+/* ////////////////////////////////////////////////////// */
+.admmincontent{
+	width: 500px;
+	border: 1px solid #90E6E9;
+	margin: auto;
+	background-color: #DDECEC;
+}
+.admmincontent ul{
+	padding-left: 0px;
+	font-size: 20px;
+	margin-bottom: 0px;
+}
+.admmincontent ul li{
+	text-align: center;
+	list-style: none;
+	padding: 10px 30px;
+	background-color: #E0F6FA;
+	
+
+}
+.admmincontent ul li:hover{
+	background-color:  #CAF4F2;
+}
+.admmincontent ul li a{
+	text-decoration: none;
+}
+.admmincontent ul li:first-child{
+	border-bottom: 1px solid #E7F4F2;
+}
